@@ -22,6 +22,8 @@ Python functions: https://www.tutorialspoint.com/python/python_functions.htm
 
 Else if : Code institute
 
+Elif game logic inspiration: https://thehelloworldprogram.com/python/python-game-rock-paper-scissors/
+
 Python for dummies book
 
 Deployment steps:

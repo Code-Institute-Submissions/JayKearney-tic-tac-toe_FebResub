@@ -1,3 +1,6 @@
+from random import randint
+import sys
+
 # Defining some variables
 empty = " "
 a = [empty, empty, empty]
@@ -42,6 +45,59 @@ def placeMark():
     else:
         print("Oops. Invalid choice! Please try again. ")
         placeMark()
+
+
+def checkWin():  # Did bot or user win
+    win = 0
+    if a[0] == userChoice:
+        if a[1] == userChoice and a[2] == userChoice:
+            win = 1  # 1 if user wins
+        elif b[0] == userChoice and c[0] == userChoice:
+            win = 1
+        elif b[1] == userChoice and c[2] == userChoice:
+            win = 1
+    if a[1] == userChoice:
+        if b[1] == userChoice and c[1] == userChoice:
+            win = 1
+    if a[2] == userChoice:
+        if b[2] == userChoice and c[2] == userChoice:
+            win = 1
+        elif b[1] == userChoice and c[0] == userChoice:
+            win = 1
+    if b[0] == userChoice and b[1] == userChoice and b[2] == userChoice:
+        win = 1
+    if c[0] == userChoice and c[1] == userChoice and c[2] == userChoice:
+        win = 1
+
+    if win != 1:  # if user did not win, check for bot's win
+
+        if a[0] == botMark:
+            if a[1] == botMark and a[2] == botMark:
+                win = 2  # 1 if user wins
+            elif b[0] == botMark and c[0] == botMark:
+                win = 2
+            elif b[1] == botMark and c[2] == botMark:
+                win = 2
+        if a[1] == botMark:
+            if b[1] == botMark and c[1] == botMark:
+                win = 2
+        if a[2] == botMark:
+            if b[2] == botMark and c[2] == botMark:
+                win = 2
+            elif b[1] == botMark and c[0] == botMark:
+                win = 2
+        if b[0] == botMark and b[1] == botMark and b[2] == botMark:
+            win = 2
+        if c[0] == botMark and c[1] == botMark and c[2] == botMark:
+            win = 2
+
+    if empty not in a and empty not in b and empty not in c:
+        win = 3
+
+    return win
+
+
+
 
 
 
