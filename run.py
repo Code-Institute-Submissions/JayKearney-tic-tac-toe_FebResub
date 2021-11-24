@@ -20,3 +20,24 @@ def player_input():
     while not (value == "X" or value == "O"):
         value = input("Please pick a value 'X' or 'O': ")
     return (value)
+
+
+
+
+#main
+
+def main():
+    print("Welcome to Tic Tac Toe")
+
+    person, computer = '',''
+
+    while True:
+        # Set up the board
+        board = { 'top-left': ' ', 'top-center': ' ', 'top-rigt': ' ',
+                 'mid-left': ' ', 'mid-center': ' ', 'mid-right': ' ',
+                 'lower-left': ' ', 'lower-center': ' ', 'lower-right': ' '} 
+        player = player_input()
+
+        # Determine who will go first
+        turn = goes_first()
+        print(turn + " will go first")
