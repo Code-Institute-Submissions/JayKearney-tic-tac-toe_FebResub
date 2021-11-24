@@ -9,6 +9,10 @@ Heroku Main Deployment:
 User Stories:
 This is designed to be a one player game of Tic Tac Toe, to be played against the computer.
 
+Testing:
+
+https://www.online-python.com/
+
 
 Credits:
 
@@ -16,7 +20,9 @@ A beginner's guide to Python variables: https://www.simplilearn.com/tutorials/py
 
 Python functions: https://www.tutorialspoint.com/python/python_functions.htm
 
-Else if, code institute
+Else if : Code institute
+
+Python for dummies book
 
 Deployment steps:
 

@@ -1,42 +1,45 @@
-#Defining some variables
+# Defining some variables
 empty = " "
 a = [empty, empty, empty]
 b = [empty, empty, empty]
 c = [empty, empty, empty]
-#^^ Rows of the Tic Tac Toe board
-win=0
+# ^^ Rows of the Tic Tac Toe board
+win = 0
 
-#Defining Functions
+# Defining Functions
 
-def userMarkChoose(): #Whether user wants X or O
-    choice = int(input("Do you want to use X[1] or O[2]?\nYour Choice (1/2):\n "))
+
+def userMarkChoose():  # Whether user wants X or O
+    print ("Do you want to use X[1] or O[2]?")
+    choice = int(input("Your Choice (1/2):\n "))
     return choice
+
 
 def placeMark():
     global a
     global b
     global c
-    row = input("Please select a row [a,b,c]: ")  
-    col = int(input("Please select a column [1,2,3]: " ))
-    col-=1
+    row = input("Please select a row [a,b,c]:\n ")
+    col = int(input("Please select a column [1,2,3]:\n "))
+    col = col-1
     if row.upper() == "A":
-        if a[col]==empty:
-            a[col]=userChoice
+        if a[col] == empty:
+            a[col] = userChoice
         else:
             print("Spot already taken. Please try again.")
             placeMark()
-    elif row.upper()=="B":
-        if b[col]==empty:
-            b[col]=userChoice
+    elif row.upper() == "B":
+        if b[col] == empty:
+            b[col] = userChoice
         else:
             print("Spot already taken. Please try again.")
             placeMark()
-    elif row.upper() =="C":
-        if c[col]==empty:
-            c[col]=userChoice
+    elif row.upper() == "C":
+        if c[col] == empty:
+            c[col] = userChoice
         else:
             print("Spot already taken. Please try again,")
-    else : 
+    else:
         print("Oops. Invalid choice! Please try again. ")
         placeMark()
 
