@@ -1,17 +1,12 @@
+#Defining some variables
+empty = " "
+a = [empty, empty, empty]
+b = [empty, empty, empty]
+c = [empty, empty, empty]
+#^^ Rows of the Tic Tac Toe board
+win=0
 
-from random import randint
-import sys
 
-    
-#Create a dictionary
-
-
-def printBoard(board):
-    print(board['top-left'] + '|'+board['top-center']+'|'+board['top-right'])
-    print('-+-+-')
-    print(board['mid-left'] + '|'+board['mid-center']+'|' + board['mid-right'])
-    print('-+-+-')
-    print(board['lower-left'] + '|'+board['lower-center']+'|' + board['lower-right'])
 
 def player_input():
 
