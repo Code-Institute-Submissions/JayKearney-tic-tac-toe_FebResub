@@ -34,6 +34,28 @@ def empty_check(board, position):
     """
     return board[position] == " "
 
+def user_choice(board):
+    """Player to choose position. Must be in range of 1-9 where a space is empty
+            return(int): Valid position number
+    """
+    position = 0
+    while position not in [1,2,3,4,5,6,7,8,9] or not empty_check(board, position):
+        position = int(input('Choose a position (1-9): '))
+    return position
+
+def place_marker(board, marker, position):
+    """Place the marker of the player in the corresponding position on the board
+            board(list)
+            marker(string): Either 'X' or 'O'
+            position(integer): Between 1 and 9
+    """
+    #loop through dictionary 
+    
+    board[position] = marker   
+
+
+
+
 #main
 
 def main():
