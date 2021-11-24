@@ -12,8 +12,11 @@ This is designed to be a one player game of Tic Tac Toe, to be played against th
 
 Credits:
 
-Tutorial Used for Software to make ASCII
+A beginner's guide to Python variables: https://www.simplilearn.com/tutorials/python-tutorial/python-variables
 
+Python functions: https://www.tutorialspoint.com/python/python_functions.htm
+
+Else if, code institute
 
 Deployment steps:
 
@@ -62,3 +65,10 @@ Clicked Connect to GitHub
 Searched for GitHub Repository name
 
 Clicked Search and Connect
+
+
+BUGs and solved errors:
+
+Removed dictionary as Board: Credit but then removed: https://medium.com/@pk1288780/creating-tic-tac-toe-in-python-using-dictionaries-70ab8ab49a19
+
+
