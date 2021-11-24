@@ -21,8 +21,18 @@ def player_input():
         value = input("Please pick a value 'X' or 'O': ")
     return (value)
 
+def goes_first():
+    if random.randint(0,1) == 0:
+        return "Computer"
+    else:
+        return "Player"
 
-
+def empty_check(board, position):
+    """Check if a space is empty
+            board(list)
+            position(int): Between 1 and 9
+    """
+    return board[position] == " "
 
 #main
 
