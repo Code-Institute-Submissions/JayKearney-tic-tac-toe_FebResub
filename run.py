@@ -195,5 +195,25 @@ def playRandom(moved):
             c[1]=botMark
 
 
+def playDefense(moved): #Check if user has any winning combinations and block.
+    global a
+    global b
+    global c
+
+#copy offense code to modity
+if not moved and b[1]==botMark:
+        if a[0]==botMark and c[2]==empty:
+            c[2]=botMark
+            moved=True
+        elif c[2]==botMark and a[0]== empty:
+            a[0]=botMark
+            moved=True
+        elif a[2]==botMark and c[0]== empty:
+            c[0]=botMark
+            moved=True
+        elif c[0]==botMark and a[2]== empty:
+            a[2]=botMark
+            moved=True
+#
 
 
