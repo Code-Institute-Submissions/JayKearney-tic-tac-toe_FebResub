@@ -238,23 +238,9 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[0] == userChoice and b[0] == empty:
             b[0] = botMark
             moved = True
-        # ^Upperleft corner combinations checked
-    if not moved and a[0] == userChoice:
-        if a[1] == userChoice and a[2] == empty:
-            a[2] = botMark
-            moved = True
-        elif a[2] == userChoice and a[1] == empty:
-            a[1] = botMark
-            moved = True
-        elif b[0] == userChoice and c[0] == empty:
-            c[0] = botMark
-            moved = True
-        elif c[0] == userChoice and b[0] == empty:
-            b[0] = botMark
-            moved = True
-        # ^Upperleft corner combinations checked
+            # ^Upperleft corner combinations checked
     if not moved and a[2] == userChoice:
-        if a[1] == userChoice and a[1] == empty:
+        if a[1] == userChoice and a[0] == empty:
             a[0] = botMark
             moved = True
         elif b[2] == userChoice and c[2] == empty:
@@ -276,7 +262,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
             moved = True
         # ^All Lowerleft corner combinations checked
     if not moved and c[2] == userChoice:
-        if c[1] == userChoice and c[1] == empty:
+        if c[1] == userChoice and c[0] == empty:
             c[0] = botMark
             moved = True
         elif b[2] == userChoice and a[1] == empty:
@@ -310,16 +296,5 @@ while True:
             print("\nInvalid choice, please try again!\n")
             continue
 
-#error in command line NameError: name 'n' is not defined#
-
-
-    
-        n = 5
-while n > 0:
-    n -= 1
-    if n == 2:
-        break
-    print(n)
-print('Loop ended.')
 
 
