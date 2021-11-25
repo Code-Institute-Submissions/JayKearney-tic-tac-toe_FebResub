@@ -225,11 +225,11 @@ def playDefense(moved): #Check if user has any winning combinations and block.
             a[0]=botMark
             moved=True
         #^All combinations that involve the center checked.
-        if not moved and a[1] == userChoice:
-        if a[0] == userChoice and a[2] == empty:
-            a[1] = botMark
+    if not moved and a[0] == userChoice:
+        if a[1] == userChoice and a[2] == empty:
+            a[2] = botMark
             moved = True
-        elif a[2] == userChoice and a[1] == empty:
+        elif a[1] == userChoice and a[2] == empty:
             a[1] = botMark
             moved = True
         elif b[0] == userChoice and c[0] == empty:
