@@ -229,7 +229,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         if a[1] == userChoice and a[2] == empty:
             a[2] = botMark
             moved = True
-        elif a[1] == userChoice and a[2] == empty:
+        elif a[2] == userChoice and a[1] == empty:
             a[1] = botMark
             moved = True
         elif b[0] == userChoice and c[0] == empty:
@@ -238,5 +238,6 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[0] == userChoice and b[0] == empty:
             b[0] = botMark
             moved = True
+            # ^Upperleft corner combinations checked
 
 
