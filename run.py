@@ -170,5 +170,30 @@ def playOffense():
     playDefense(moved)
 
 
+    def playRandom(moved):
+    global a
+    global b
+    global c
+    if not moved:
+        if b[1] == empty:
+            b[1] = botMark
+        elif a[0] == empty:
+            a[0] = botMark
+        elif a[2] == empty:
+            a[2] = botMark
+        elif c[0] == empty:
+            c[0] = botMark
+        elif c[2] == empty:
+            c[2] = botMark
+        elif (a[0] == botMark or a[2] == botMark) and a[1] == empty:
+            a[1] = botMark
+        elif (a[0] == botMark or c[0] == botMark) and b[0] == empty:
+            b[0] = botMark
+        elif(a[2] == botMark or c[2] == botMark) and b[2] == empty:
+            b[2] = botMark
+        elif(c[2] == botMark or c[0] == botMark) and c[1] == empty:
+            c[0] = botMark
+
+
 
 
