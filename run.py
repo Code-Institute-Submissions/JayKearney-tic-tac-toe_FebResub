@@ -312,6 +312,13 @@ while True:  # to keep the program looping until someone wins
     if win == 1:
         print("\nCongratulations! User Won!")
         break
+    elif won == 2:
+        print("\nBot won! Better luck next time!")
+        break
+    elif win == 3:
+        print("\nIt's a Draw!")
+        break
+    placeMark()
 
 
 
