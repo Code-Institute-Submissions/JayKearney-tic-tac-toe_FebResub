@@ -224,7 +224,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[2]==userChoice and a[0]==empty:
             a[0]=botMark
             moved=True
-        #^All combinations that involve the center checked.
+    #^All combinations that involve the center checked.
     if not moved and a[0] == userChoice:
         if a[1] == userChoice and a[2] == empty:
             a[2] = botMark
@@ -238,7 +238,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[0] == userChoice and b[0] == empty:
             b[0] = botMark
             moved = True
-            # ^Upperleft corner combinations checked
+    # ^Upperleft corner combinations checked
     if not moved and a[2] == userChoice:
         if a[1] == userChoice and a[0] == empty:
             a[0] = botMark
@@ -249,7 +249,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[2] == userChoice and b[2] == empty:
             b[2] = botMark
             moved = True
-        # ^All Upper-right corner combinations checked
+    # ^All Upper-right corner combinations checked
     if not moved and c[0] == userChoice:
         if b[0] == userChoice and a[0] == empty:
             a[0] = botMark
@@ -260,7 +260,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[2] == userChoice and c[1] == empty:
             c[1] = botMark
             moved = True
-        # ^All Lowerleft corner combinations checked
+    # ^All Lowerleft corner combinations checked
     if not moved and c[2] == userChoice:
         if c[1] == userChoice and c[0] == empty:
             c[0] = botMark
@@ -268,7 +268,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif b[2] == userChoice and a[1] == empty:
             a[1] = botMark
             moved = True
-        # ^All lower-right corner combinations checked
+    # ^All lower-right corner combinations checked
     if not moved and a[1] == userChoice:
         if c[1] == userChoice and b[1] == empty:
             b[1] = botMark
@@ -295,6 +295,23 @@ while True:
         else:
             print("\nInvalid choice, please try again!\n")
             continue
+
+
+while True:  # to keep the program looping until someone wins
+    print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
+    print("   a  ", *a, sep=" | ", end=" ")
+    print("|")
+    print("      ----------------")
+    print("   b  ", *b, sep=" | ", end=" ")
+    print("|")
+    print("      ----------------")
+    print("   c  ", *c, sep=" | ", end=" ")
+    print("|")
+
+    print("\n")
+    if win == 1:
+        print("\nCongratulations! User Won!")
+        break
 
 
 
