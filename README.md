@@ -26,6 +26,8 @@ Elif game logic inspiration: https://thehelloworldprogram.com/python/python-game
 
 Python for dummies book
 
+winning elif combinations https://stackoverflow.com/questions/59625685/i-need-winning-combinations-for-tic-tac-toe-or-at-least-some-hints-tips
+
 Deployment steps:
 
 Used template from Code Institute to allow python backend application to have a pre-built front-end to allow ease of running for the user
