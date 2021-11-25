@@ -97,53 +97,78 @@ def checkWin():  # Did bot or user win
     return win
 
 
+def playOffense():
+    global a
+    global b
+    global c
+    moved = False
+    if not moved and b[1] == botMark:
+        if a[0] == botMark and c[2] == empty:
+            c[2] = botMark
+            moved = True
+        elif c[2] == botMark and a[0] == empty:
+            a[0] = botMark
+            moved = True
+        elif a[2] == botMark and c[0] == empty:
+            c[0] = botMark
+            moved = True
+        elif c[0] == botMark and a[2] == empty:
+            a[2] = botMark
+            moved = True
+        # ^Checking if center-corner combinations can give win.
+        elif a[1] == botMark and c[1] == empty:
+            c[1] = botMark
+            moved = True
+        elif c[1] == botMark and a[1] == empty:
+            a[1] = botMark
+            moved = True
+        elif b[0] == botMark and b[2] == empty:
+            b[2] = botMark
+            moved = True
+        elif b[2] == botMark and b[0] == empty:
+            b[0] = botMark
+            moved = True
+        # ^Checking if center-center can give bot win
+    if not moved and a[0] == botMark:
+        if a[1] == botMark and a[2] == empty:
+            a[2] = botMark
+            moved = True
+        elif a[2] == botMark and a[1] == empty:
+            a[1] = botMark
+            moved = True
+        elif b[0] == botMark and c[0] == empty:
+            c[0] = botMark
+            moved = True
+        elif c[0] == botMark and b[0] == empty:
+            b[0] = botMark
+            moved = True
+    # ^All upperleft corner combinations
+    if not moved and a[2] == botMark:
+        if a[1] == botMark and a[0] == empty:
+            a[0] = botMark
+            moved = True
+        elif b[2] == botMark and c[2] == empty:
+            c[2] = botMark
+            moved = True
+        elif c[2] == botMark and b[2] == empty:
+            b[2] = botMark
+            moved = True
+    # ^All upperright combinations
+    if not moved and c[2] == botMark:
+        if c[1] == botMark and c[0] == empty:
+            c[0] = botMark
+            moved = True
+        elif c[0] == botMark and c[1] == empty:
+            c[1] = botMark
+            moved = True
+    # ^All bottomright combinations
+    if not moved and c[0] == botMark:
+        if b[0] == botMark and a[0] == empty:
+            a[0] = botMark
+            moved = True
+    # ^All bottomleft combinations
+    playDefense(moved)
 
 
 
 
-#def empty_check(board, position):
-    """Check if a space is empty
-            board(list)
-            position(int): Between 1 and 9
-    """
-    #return board[position] == " "
-
-#def user_choice(board):
-    """Player to choose position. Must be in range of 1-9 where a space is empty
-            return(int): Valid position number
-    """
-    #position = 0
-    #while position not in [1,2,3,4,5,6,7,8,9] or not empty_check(board, position):
-        #position = int(input('Choose a position (1-9): '))
-    #return position
-
-#def place_marker(board, marker, position):
-    """Place the marker of the player in the corresponding position on the board
-            board(list)
-            marker(string): Either 'X' or 'O'
-            position(integer): Between 1 and 9
-    """
-    #loop through dictionary 
-    
-    #board[position] = marker   
-
-
-
-
-#main
-
-def main():
-    print("Welcome to Tic Tac Toe")
-
-    person, computer = '',''
-
-    while True:
-        # Set up the board
-        board = { 'top-left': ' ', 'top-center': ' ', 'top-rigt': ' ',
-                 'mid-left': ' ', 'mid-center': ' ', 'mid-right': ' ',
-                 'lower-left': ' ', 'lower-center': ' ', 'lower-right': ' '} 
-        player = player_input()
-
-        # Determine who will go first
-        turn = goes_first()
-        print(turn + " will go first")
