@@ -199,21 +199,31 @@ def playDefense(moved): #Check if user has any winning combinations and block.
     global a
     global b
     global c
-
-#copy offense code to modity
-if not moved and b[1]==botMark:
-        if a[0]==botMark and c[2]==empty:
+    if not moved and b[1]==userChoice:
+        if a[0]==userChoice and c[2]==empty:
             c[2]=botMark
             moved=True
-        elif c[2]==botMark and a[0]== empty:
-            a[0]=botMark
+        elif a[1]==userChoice and c[1]==empty:
+            c[1]=botMark
             moved=True
-        elif a[2]==botMark and c[0]== empty:
+        elif a[2]==userChoice and c[0]==empty:
             c[0]=botMark
             moved=True
-        elif c[0]==botMark and a[2]== empty:
+        elif b[0]==userChoice and b[2]==empty:
+            b[2]=botMark
+            moved=True
+        elif b[2]==userChoice and b[0]==empty:
+            b[0]=botMark
+            moved=True 
+        elif c[0]==userChoice and a[2]==empty:
             a[2]=botMark
             moved=True
-#
+        elif c[1]==userChoice and a[1]==empty:
+            a[1]=botMark
+            moved=True
+        elif c[2]==userChoice and a[0]==empty:
+            a[0]=botMark
+            moved=True
+        #^All combinations that involve the center checked.
 
 
