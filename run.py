@@ -293,3 +293,33 @@ def playDefense(moved): #Check if user has any winning combinations and block.
     # if there is nothing to defend, place at advantageous spot
 
 
+# Logic of game begins here
+while True:
+        userChoice = userMarkChoose()
+        # ^ Ask user's choice and set bot's mark accordingly
+        if userChoice == 1:
+            print("YOU ARE X!")
+            userChoice = "X"
+            botMark = "O"
+            break
+        elif userChoice == 2:
+            userChoice = "O"
+            botMark = "X"
+            break
+        else:
+            print("\nInvalid choice, please try again!\n")
+            continue
+
+#error in command line NameError: name 'n' is not defined#
+
+
+    
+        n = 5
+while n > 0:
+    n -= 1
+    if n == 2:
+        break
+    print(n)
+print('Loop ended.')
+
+
