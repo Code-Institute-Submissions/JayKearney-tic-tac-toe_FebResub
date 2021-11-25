@@ -238,6 +238,58 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[0] == userChoice and b[0] == empty:
             b[0] = botMark
             moved = True
-            # ^Upperleft corner combinations checked
+        # ^Upperleft corner combinations checked
+    if not moved and a[0] == userChoice:
+        if a[1] == userChoice and a[2] == empty:
+            a[2] = botMark
+            moved = True
+        elif a[2] == userChoice and a[1] == empty:
+            a[1] = botMark
+            moved = True
+        elif b[0] == userChoice and c[0] == empty:
+            c[0] = botMark
+            moved = True
+        elif c[0] == userChoice and b[0] == empty:
+            b[0] = botMark
+            moved = True
+        # ^Upperleft corner combinations checked
+    if not moved and a[2] == userChoice:
+        if a[1] == userChoice and a[1] == empty:
+            a[0] = botMark
+            moved = True
+        elif b[2] == userChoice and c[2] == empty:
+            c[2] = botMark
+            moved = True
+        elif c[2] == userChoice and b[2] == empty:
+            b[2] = botMark
+            moved = True
+        # ^All Upper-right corner combinations checked
+    if not moved and c[0] == userChoice:
+        if b[0] == userChoice and a[0] == empty:
+            a[0] = botMark
+            moved = True
+        elif c[1] == userChoice and c[2] == empty:
+            c[2] = botMark
+            moved = True
+        elif c[2] == userChoice and c[1] == empty:
+            c[1] = botMark
+            moved = True
+        # ^All Lowerleft corner combinations checked
+    if not moved and c[2] == userChoice:
+        if c[1] == userChoice and c[1] == empty:
+            c[0] = botMark
+            moved = True
+        elif b[2] == userChoice and a[1] == empty:
+            a[1] = botMark
+            moved = True
+        # ^All lower-right corner combinations checked
+    if not moved and a[1] == userChoice:
+        if c[1] == userChoice and b[1] == empty:
+            b[1] = botMark
+            moved = True
+        if b[1] == userChoice and c[1] == empty:
+            c[1] == empty
+    playRandom(moved)
+    # if there is nothing to defend, place at advantageous spot
 
 
