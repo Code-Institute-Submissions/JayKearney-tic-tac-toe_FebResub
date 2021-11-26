@@ -81,6 +81,8 @@ Clicked Search and Connect
 
 BUGs and solved errors:
 
+no new lines in pep8
+
 Removed dictionary as Board: Credit but then removed: https://medium.com/@pk1288780/creating-tic-tac-toe-in-python-using-dictionaries-70ab8ab49a19
 
 

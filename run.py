@@ -13,7 +13,7 @@ win = 0
 
 
 def userMarkChoose():  # Whether user wants X or O
-    print ("Do you want to use X[1] or O[2]?")
+    print("Do you want to use X[1] or O[2]?")
     choice = int(input("Your Choice (1/2): "))
     return choice
 
@@ -323,4 +323,6 @@ while True:  # to keep the program looping until someone wins
     if win == 0:
         playOffense()
     win = checkWin()
-    # Checking again if anyone won
+    # ^Checking again if anyone won
+
+
