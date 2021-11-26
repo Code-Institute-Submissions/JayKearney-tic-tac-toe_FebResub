@@ -14,7 +14,7 @@ win = 0
 
 def userMarkChoose():  # Whether user wants X or O
     print ("Do you want to use X[1] or O[2]?")
-    choice = int(input("Your Choice (1/2):\n "))
+    choice = int(input("Your Choice (1/2): "))
     return choice
 
 
@@ -22,8 +22,8 @@ def placeMark():
     global a
     global b
     global c
-    row = input("Please select a row [a,b,c]:\n ")
-    col = int(input("Please select a column [1,2,3]:\n "))
+    row = input("Please select a row [a,b,c]: ")
+    col = int(input("Please select a column [1,2,3]: "))
     col = col-1
     if row.upper() == "A":
         if a[col] == empty:
@@ -170,61 +170,62 @@ def playOffense():
     playDefense(moved)
 
 
-def playRandom(moved): 
+def playRandom(moved):
     global a
     global b
     global c
     if not moved:
-        if b[1]==empty:    
-            b[1]=botMark
-        elif a[0]==empty:
-            a[0]=botMark
-        elif a[2]==empty:
-            a[2]=botMark
-        elif c[0]==empty:
-            c[0]=botMark
-        elif c[2]==empty:
-            c[2]=botMark                              
-        elif (a[0]==botMark or a[2]==botMark) and a[1]==empty:
-            a[1]=botMark
-        elif (a[0]==botMark or c[0]==botMark) and b[0]==empty:
-            b[0]=botMark
-        elif(a[2]==botMark or c[2]==botMark) and b[2]==empty:
-            b[2]=botMark
-        elif(c[2]==botMark or c[0]==botMark) and c[1]==empty:
-            c[1]=botMark
+        if b[1] == empty:
+            b[1] = botMark
+        elif a[0] == empty:
+            a[0] = botMark
+        elif a[2] == empty:
+            a[2] = botMark
+        elif c[0] == empty:
+            c[0] = botMark
+        elif c[2] == empty:
+            c[2] = botMark
+        elif (a[0] == botMark or a[2] == botMark) and a[1] == empty:
+            a[1] = botMark
+        elif (a[0] == botMark or c[0] == botMark) and b[0] == empty:
+            b[0] = botMark
+        elif(a[2] == botMark or c[2] == botMark) and b[2] == empty:
+            b[2] = botMark
+        elif(c[2] == botMark or c[0] == botMark) and c[1] == empty:
+            c[1] = botMark
 
 
-def playDefense(moved): #Check if user has any winning combinations and block.
+def playDefense(moved):
+    # Check if user has any winning combinations and block.
     global a
     global b
     global c
-    if not moved and b[1]==userChoice:
-        if a[0]==userChoice and c[2]==empty:
-            c[2]=botMark
-            moved=True
-        elif a[1]==userChoice and c[1]==empty:
-            c[1]=botMark
-            moved=True
-        elif a[2]==userChoice and c[0]==empty:
-            c[0]=botMark
-            moved=True
-        elif b[0]==userChoice and b[2]==empty:
-            b[2]=botMark
-            moved=True
-        elif b[2]==userChoice and b[0]==empty:
-            b[0]=botMark
-            moved=True 
-        elif c[0]==userChoice and a[2]==empty:
-            a[2]=botMark
-            moved=True
-        elif c[1]==userChoice and a[1]==empty:
-            a[1]=botMark
-            moved=True
-        elif c[2]==userChoice and a[0]==empty:
-            a[0]=botMark
-            moved=True
-    #^All combinations that involve the center checked.
+    if not moved and b[1] == userChoice:
+        if a[0] == userChoice and c[2] == empty:
+            c[2] = botMark
+            moved = True
+        elif a[1] == userChoice and c[1] == empty:
+            c[1] = botMark
+            moved = True
+        elif a[2] == userChoice and c[0] == empty:
+            c[0] = botMark
+            moved = True
+        elif b[0] == userChoice and b[2] == empty:
+            b[2] = botMark
+            moved = True
+        elif b[2] == userChoice and b[0] == empty:
+            b[0] = botMark
+            moved = True
+        elif c[0] == userChoice and a[2] == empty:
+            a[2] = botMark
+            moved = True
+        elif c[1] == userChoice and a[1] == empty:
+            a[1] = botMark
+            moved = True
+        elif c[2] == userChoice and a[0] == empty:
+            a[0] = botMark
+            moved = True
+        # ^All combinations that involve the center checked.
     if not moved and a[0] == userChoice:
         if a[1] == userChoice and a[2] == empty:
             a[2] = botMark
@@ -238,7 +239,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[0] == userChoice and b[0] == empty:
             b[0] = botMark
             moved = True
-    # ^Upperleft corner combinations checked
+            # ^Upperleft corner combinations checked
     if not moved and a[2] == userChoice:
         if a[1] == userChoice and a[0] == empty:
             a[0] = botMark
@@ -249,7 +250,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[2] == userChoice and b[2] == empty:
             b[2] = botMark
             moved = True
-    # ^All Upper-right corner combinations checked
+        # ^All Upper-right corner combinations checked
     if not moved and c[0] == userChoice:
         if b[0] == userChoice and a[0] == empty:
             a[0] = botMark
@@ -260,7 +261,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif c[2] == userChoice and c[1] == empty:
             c[1] = botMark
             moved = True
-    # ^All Lowerleft corner combinations checked
+        # ^All Lowerleft corner combinations checked
     if not moved and c[2] == userChoice:
         if c[1] == userChoice and c[0] == empty:
             c[0] = botMark
@@ -268,7 +269,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
         elif b[2] == userChoice and a[1] == empty:
             a[1] = botMark
             moved = True
-    # ^All lower-right corner combinations checked
+        # ^All lower-right corner combinations checked
     if not moved and a[1] == userChoice:
         if c[1] == userChoice and b[1] == empty:
             b[1] = botMark
@@ -278,8 +279,7 @@ def playDefense(moved): #Check if user has any winning combinations and block.
     playRandom(moved)
     # if there is nothing to defend, place at advantageous spot
 
-
-# Logic of game begins here
+# Logic begins here
 while True:
         userChoice = userMarkChoose()
         # ^ Ask user's choice and set bot's mark accordingly
@@ -296,7 +296,6 @@ while True:
             print("\nInvalid choice, please try again!\n")
             continue
 
-
 while True:  # to keep the program looping until someone wins
     print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
     print("   a  ", *a, sep=" | ", end=" ")
@@ -312,13 +311,16 @@ while True:  # to keep the program looping until someone wins
     if win == 1:
         print("\nCongratulations! User Won!")
         break
-    elif won == 2:
+    elif win == 2:
         print("\nBot won! Better luck next time!")
         break
     elif win == 3:
         print("\nIt's a Draw!")
         break
     placeMark()
-
-
-
+    # ^Setting user's choice in place.
+    win = checkWin()
+    if win == 0:
+        playOffense()
+    win = checkWin()
+    # Checking again if anyone won
