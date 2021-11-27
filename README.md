@@ -1,10 +1,10 @@
-# ULTIMATE Tic-Tac-Toe
+# Tic-Tac-Toe
 
-ULTIMATE Tic Tac Toe is a Python terminal game, which runs in Code Institute mock terminal on Heroku.
+Tic Tac Toe is a Python terminal game, which runs in Code Institute mock terminal on Heroku.
 
 Users can try to beat the computer in this classic Tic Tac Toe game by selecting a row and a column.
 
-![Responsice Mockup](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/responsive.png)
+![Responsive Mockup](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/responsive.png)
 
 # How to play
 
@@ -58,14 +58,9 @@ Working this way made it much easier to translate it into code since I had a cle
 
 1. First of all, the user is asked to select a mark (X or O). Whichever one they select is assigned to userChoice and the other is assigned to the botMark.
 
-2. Three lists with values [" ", " ", " "] are assigned to a,b and c. This serves as the board of the tic-tac-toe, with separators set to | for aesthetic purpose.
+2. Three lists with values [" ", " ", " "] are assigned to a,b and c. This serves as the board of the tic-tac-toe, with separators set to | for aesthetic purpose:
 
-	  1   2   3
-     a  |   |   |   |
-       ----------------
-     b  |   |   |   |
-       ----------------
-     c  |   |   |   |
+![Board]()
      
 3. User is asked to select a row [A, B, or C], and a column [1, 2 or 3], to place their mark. The selected row name is used as list name ["A" for a, and so on], and the selected column, subtracted by 1, is used as list index.
 
