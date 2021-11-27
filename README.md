@@ -60,7 +60,7 @@ Working this way made it much easier to translate it into code since I had a cle
 
 2. Three lists with values [" ", " ", " "] are assigned to a,b and c. This serves as the board of the tic-tac-toe, with separators set to | for aesthetic purpose:
 
-![Board]()
+![Board](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/board.read.me.png)
      
 3. User is asked to select a row [A, B, or C], and a column [1, 2 or 3], to place their mark. The selected row name is used as list name ["A" for a, and so on], and the selected column, subtracted by 1, is used as list index.
 
