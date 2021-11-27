@@ -4,7 +4,7 @@ ULTIMATE Tic Tac Toe is a Python terminal game, which runs in Code Institute moc
 
 Users can try to beat the computer in this classic Tic Tac Toe game by selecting a row and a column.
 
-![Responsice Mockup](https://github.com/JayKearney/personal-budget-calculator/blob/main/assets/images/responsive%20design.png)
+![Responsice Mockup](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/responsive.png)
 
 # How to play
 
@@ -26,7 +26,7 @@ Heroku Deployed Project Running: Game starting:
 
 Player is asked if they want to choosee between X or O:
 
-![Start]()
+![Start](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/start%20of%20program.png)
 
 - Play against the computer
 - Shows board
@@ -38,11 +38,11 @@ Player is asked if they want to choosee between X or O:
 
  - You have to enter both a letter (a,b or c) and number (1,2,3) and in that order
 
-![Invalid Choice]()
+![Invalid Choice](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/invalid%20choice.png)
 
 - Winner is displayed on the board and output message:
 
-![Bot won]()
+![Bot won](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/bot%20won.png)
 
 # Process and Logic:
 
@@ -209,21 +209,21 @@ Clicked Search and Connect
 
 # Credits
 
-![A beginner's guide to Python variables](https://www.simplilearn.com/tutorials/python-tutorial/python-variables)
+[A beginner's guide to Python variables](https://www.simplilearn.com/tutorials/python-tutorial/python-variables)
 
-![Python functions](https://www.tutorialspoint.com/python/python_functions.htm)
+[Python functions](https://www.tutorialspoint.com/python/python_functions.htm)
 
 Else if logic : Taken from Code institute
 
-![Elif Game logic inspiration](https://thehelloworldprogram.com/python/python-game-rock-paper-scissors/)
+[Elif Game logic inspiration](https://thehelloworldprogram.com/python/python-game-rock-paper-scissors/)
 
 Python for Dummies Book
 
-![Winning elif combinations](https://stackoverflow.com/questions/59625685/i-need-winning-combinations-for-tic-tac-toe-or-at-least-some-hints-tips)
+[Winning elif combinations](https://stackoverflow.com/questions/59625685/i-need-winning-combinations-for-tic-tac-toe-or-at-least-some-hints-tips)
 
-![While true](https://realpython.com/python-while-loop/)
+[While true](https://realpython.com/python-while-loop/)
 
-![Removed dictionary as Board](https://medium.com/@pk1288780/creating-tic-tac-toe-in-python-using-dictionaries-70ab8ab49a19)
+[Removed dictionary as Board](https://medium.com/@pk1288780/creating-tic-tac-toe-in-python-using-dictionaries-70ab8ab49a19)
 
 Code Institute for the deployment terminal
 
