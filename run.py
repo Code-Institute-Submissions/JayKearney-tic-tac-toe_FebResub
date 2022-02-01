@@ -2,7 +2,10 @@ from random import randint
 import sys
 
 # Logic begins here
+
+
 def main():
+
     # Defining some variables
     global empty 
     empty = " "
