@@ -147,6 +147,8 @@ This is designed to be a one player game of Tic Tac Toe, to be played against th
 - I had bugs at the beginning when trying to create the Board using a dictionary, when I had taken a different approach. I pivoted and wrote it in paper first. Bugs were fixed since code was changed.
 - I also had indentation erros and wrong numbers entered that were fixed.
 - Fixed No new lines error in pep8.
+- Error if entering nothing during the initial mark choice (X or O): Fix:  Entered a try-except clause inside a while loop to capture any exceptions (invalid inputs) and run loop again in case of exceptions. Breaks out of loop in case no exceptions are found. 
+- Error if entering invalid input or empty input during row and column choice: Fix: Entered a try-except clause inside while loop, just like the first bug's fix, and checked if input is in 1,2,3 (for column) or a,b,c (for rows). If true, the loop breaks, else it runs again.
 
 
 # Unfixed Bugs
