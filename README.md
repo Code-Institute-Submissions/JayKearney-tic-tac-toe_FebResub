@@ -140,7 +140,7 @@ This is designed to be a one player game of Tic Tac Toe, to be played against th
 
  # Validator Testing
 
- - Passed the code through a PEP8 linter and confirmed there are no problems: (pep8)
+ - Passed the code through a PEP8 linter and confirmed there are no problems: ![Pep8](https://github.com/JayKearney/tic-tac-toe/blob/main/views/images/pep8%20check.png)
 
  # Bugs
 
