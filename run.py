@@ -7,16 +7,16 @@ import sys
 def main():
 
     # Defining some variables
-    global empty 
+    global empty
     empty = " "
-    global a 
+    global a
     a = [empty, empty, empty]
-    global b 
+    global b
     b = [empty, empty, empty]
-    global c 
+    global c
     c = [empty, empty, empty]
     # ^^ Rows of the Tic Tac Toe board
-    global win 
+    global win
     win = 0
     global userChoice
     global botMark
@@ -44,7 +44,7 @@ def main():
         print("|")
         print("      ----------------")
         print("   c  ", *c, sep=" | ", end=" ")
-        print("|")   
+        print("|")
         print("\n")
         if win == 1:
             print("\nCongratulations! User Won!")
