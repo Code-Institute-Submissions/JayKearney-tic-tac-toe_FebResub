@@ -83,18 +83,18 @@ def placeMark():
     global a
     global b
     global c
-	row = ""
+    row = ""
     while True:
-        row = input("Please select a row [a,b,c]: ")
-        if row == "" or row not in ["a","b","c"]:
-            print("\nPlease enter a valid row.")
-            continue
+        row = input("Please select a row [a, b, c]: ")
+        if row == "" or row not in ["a", "b", "c"]:
+        print("\nPlease enter a valid row.")
+        continue
         else:
             break
     while True:
         try:
             col = int(input("Please select a column [1,2,3]: "))
-            if col in [1,2,3]:
+            if col in [1, 2, 3]:
                 break
             else:
                 print("\nPlease enter a valid column.")
