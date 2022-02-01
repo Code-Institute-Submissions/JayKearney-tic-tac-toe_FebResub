@@ -1,13 +1,66 @@
 from random import randint
 import sys
 
-# Defining some variables
-empty = " "
-a = [empty, empty, empty]
-b = [empty, empty, empty]
-c = [empty, empty, empty]
-# ^^ Rows of the Tic Tac Toe board
-win = 0
+# Logic begins here
+def main():
+    # Defining some variables
+    global empty 
+    empty = " "
+    global a 
+    a = [empty, empty, empty]
+    global b 
+    b = [empty, empty, empty]
+    global c 
+    c = [empty, empty, empty]
+    # ^^ Rows of the Tic Tac Toe board
+    global win 
+    win = 0
+    global userChoice
+    global botMark
+    while True:
+            userChoice = userMarkChoose()
+            # ^ Ask user's choice and set bot's mark accordingly
+            if userChoice == 1:
+                print("YOU ARE X!")
+                userChoice = "X"
+                botMark = "O"
+                break
+            elif userChoice == 2:
+                userChoice = "O"
+                botMark = "X"
+                break
+            else:
+                print("\nInvalid choice, please try again!\n")
+                continue
+    
+    while True:  # to keep the program looping until someone wins
+        print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
+        print("   a  ", *a, sep=" | ", end=" ")
+        print("|")
+        print("      ----------------")
+        print("   b  ", *b, sep=" | ", end=" ")
+        print("|")
+        print("      ----------------")
+        print("   c  ", *c, sep=" | ", end=" ")
+        print("|")
+    
+        print("\n")
+        if win == 1:
+            print("\nCongratulations! User Won!")
+            break
+        elif win == 2:
+            print("\nBot won! Better luck next time!")
+            break
+        elif win == 3:
+            print("\nIt's a Draw!")
+            break
+        placeMark()
+        # ^Setting user's choice in place.
+        win = checkWin()
+        if win == 0:
+            playOffense()
+        win = checkWin()
+        # Checking again if anyone won
 
 # Defining Functions
 
@@ -325,5 +378,5 @@ while True:  # to keep the program looping until someone wins
     win = checkWin()
     # ^Checking again if anyone won
 
-
-
+if __name__ == "__main__":
+    main()
