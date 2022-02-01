@@ -35,7 +35,6 @@ def main():
             else:
                 print("\nInvalid choice, please try again!\n")
                 continue
-    
     while True:  # to keep the program looping until someone wins
         print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
         print("   a  ", *a, sep=" | ", end=" ")
@@ -45,8 +44,7 @@ def main():
         print("|")
         print("      ----------------")
         print("   c  ", *c, sep=" | ", end=" ")
-        print("|")
-    
+        print("|")   
         print("\n")
         if win == 1:
             print("\nCongratulations! User Won!")
@@ -88,7 +86,7 @@ def placeMark():
     while True:
         row = input("Please select a row [a, b, c]: ")
         if row == "" or row not in ["a", "b", "c"]:
-           print("\nPlease enter a valid row.")
+                print("\nPlease enter a valid row.")
         continue
 
         else:
