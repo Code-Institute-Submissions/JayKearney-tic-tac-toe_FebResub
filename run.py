@@ -1,11 +1,9 @@
 from random import randint
 import sys
 
+
 # Logic begins here
-
-
 def main():
-
     # Defining some variables
     global empty
     empty = " "
@@ -21,20 +19,21 @@ def main():
     global userChoice
     global botMark
     while True:
-            userChoice = userMarkChoose()
-            # ^ Ask user's choice and set bot's mark accordingly
-            if userChoice == 1:
-                print("YOU ARE X!")
-                userChoice = "X"
-                botMark = "O"
-                break
-            elif userChoice == 2:
-                userChoice = "O"
-                botMark = "X"
-                break
-            else:
-                print("\nInvalid choice, please try again!\n")
-                continue
+        userChoice = userMarkChoose()
+        # ^ Ask user's choice and set bot's mark accordingly
+        if userChoice == 1:
+            print("YOU ARE X!")
+            userChoice = "X"
+            botMark = "O"
+            break
+        elif userChoice == 2:
+            userChoice = "O"
+            botMark = "X"
+            break
+        else:
+            print("\nInvalid choice, please try again!\n")
+            continue
+
     while True:  # to keep the program looping until someone wins
         print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
         print("   a  ", *a, sep=" | ", end=" ")
@@ -45,6 +44,7 @@ def main():
         print("      ----------------")
         print("   c  ", *c, sep=" | ", end=" ")
         print("|")
+
         print("\n")
         if win == 1:
             print("\nCongratulations! User Won!")
@@ -64,8 +64,6 @@ def main():
         # Checking again if anyone won
 
 # Defining Functions
-
-
 def userMarkChoose():  # Whether user wants X or O
     print ("Do you want to use X[1] or O[2]?")
     while True:
@@ -82,20 +80,17 @@ def placeMark():
     global b
     global c
     row = ""
-
     while True:
-        row = input("Please select a row [a, b, c]: ")
-        if row == "" or row not in ["a", "b", "c"]:
-                print("\nPlease enter a valid row.")
-        continue
-
+        row = input("Please select a row [a,b,c]: ")
+        if row == "" or row not in ["a","b","c"]:
+            print("\nPlease enter a valid row.")
+            continue
         else:
             break
-
     while True:
         try:
             col = int(input("Please select a column [1,2,3]: "))
-            if col in [1, 2, 3]:
+            if col in [1,2,3]:
                 break
             else:
                 print("\nPlease enter a valid column.")
@@ -358,51 +353,6 @@ def playDefense(moved):
     playRandom(moved)
     # if there is nothing to defend, place at advantageous spot
 
-# Logic begins here
-while True:
-        userChoice = userMarkChoose()
-        # ^ Ask user's choice and set bot's mark accordingly
-        if userChoice == 1:
-            print("YOU ARE X!")
-            userChoice = "X"
-            botMark = "O"
-            break
-        elif userChoice == 2:
-            userChoice = "O"
-            botMark = "X"
-            break
-        else:
-            print("\nInvalid choice, please try again!\n")
-            continue
-
-while True:  # to keep the program looping until someone wins
-    print("\n"*20 + "YOU ARE "+userChoice+"!\n\n\n         1   2   3")
-    print("   a  ", *a, sep=" | ", end=" ")
-    print("|")
-    print("      ----------------")
-    print("   b  ", *b, sep=" | ", end=" ")
-    print("|")
-    print("      ----------------")
-    print("   c  ", *c, sep=" | ", end=" ")
-    print("|")
-
-    print("\n")
-    if win == 1:
-        print("\nCongratulations! User Won!")
-        break
-    elif win == 2:
-        print("\nBot won! Better luck next time!")
-        break
-    elif win == 3:
-        print("\nIt's a Draw!")
-        break
-    placeMark()
-    # ^Setting user's choice in place.
-    win = checkWin()
-    if win == 0:
-        playOffense()
-    win = checkWin()
-    # ^Checking again if anyone won
-
 if __name__ == "__main__":
     main()
+
