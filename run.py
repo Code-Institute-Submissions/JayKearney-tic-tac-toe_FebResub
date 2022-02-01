@@ -64,6 +64,8 @@ def main():
         # Checking again if anyone won
 
 # Defining Functions
+
+
 def userMarkChoose():  # Whether user wants X or O
     print ("Do you want to use X[1] or O[2]?")
     while True:
@@ -81,8 +83,8 @@ def placeMark():
     global c
     row = ""
     while True:
-        row = input("Please select a row [a,b,c]: ")
-        if row == "" or row not in ["a","b","c"]:
+        row = input("Please select a row [a, b, c]: ")
+        if row == "" or row not in ["a", "b", "c"]:
             print("\nPlease enter a valid row.")
             continue
         else:
@@ -90,7 +92,7 @@ def placeMark():
     while True:
         try:
             col = int(input("Please select a column [1,2,3]: "))
-            if col in [1,2,3]:
+            if col in [1, 2, 3]:
                 break
             else:
                 print("\nPlease enter a valid column.")
@@ -355,4 +357,3 @@ def playDefense(moved):
 
 if __name__ == "__main__":
     main()
-
