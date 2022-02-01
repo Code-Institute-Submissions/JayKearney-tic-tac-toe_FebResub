@@ -66,8 +66,13 @@ def main():
 
 
 def userMarkChoose():  # Whether user wants X or O
-    print("Do you want to use X[1] or O[2]?")
-    choice = int(input("Your Choice (1/2): "))
+    print ("Do you want to use X[1] or O[2]?")
+    while True:
+        try:
+            choice = int(input("Your Choice (1/2): "))
+            break
+        except:
+            continue
     return choice
 
 
@@ -75,8 +80,25 @@ def placeMark():
     global a
     global b
     global c
-    row = input("Please select a row [a,b,c]: ")
-    col = int(input("Please select a column [1,2,3]: "))
+	row = ""
+    while True:
+        row = input("Please select a row [a,b,c]: ")
+        if row == "" or row not in ["a","b","c"]:
+            print("\nPlease enter a valid row.")
+            continue
+        else:
+            break
+    while True:
+        try:
+            col = int(input("Please select a column [1,2,3]: "))
+            if col in [1,2,3]:
+                break
+            else:
+                print("\nPlease enter a valid column.")
+                continue
+        except:
+            print("\nPlease enter a valid column.")
+            continue
     col = col-1
     if row.upper() == "A":
         if a[col] == empty:
